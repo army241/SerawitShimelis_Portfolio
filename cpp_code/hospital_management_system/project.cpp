@@ -133,7 +133,7 @@ char proceed;
         cout << "3. Search Patient by ID\n";
         cout << "4. Delete Patient Record\n";
         cout << "5. Update Patient Record\n";
-        cout << "6. Discharge a patient\n";
+        cout << "6. Discharge A patient\n";
         cout << "7. Manage Staff\n";
         cout << "8. Manage Pharmacy\n";
         cout << "9. Manage The Bill\n";
