@@ -35,7 +35,7 @@
                 
                 }
                
-            h1{
+            h1,h2{
                 color: white;
                 margin-left: 20px;
                 margin-top: 70px;
@@ -50,10 +50,18 @@
                 width: 150px;
                 height: 50px;
             }
+            p{
+                font-size: 20px;
+                color: white;
+                margin-top: 30px;
+                margin-left: 60px;
+            }
+            
         </style>
     </head>
     <body>
         <h1>Rock Paper Scissors Game</h1>
+        <h2>Pick Your Choice</h2>
         <button class="choice1" onclick="
             playGame('rock');
         "></button>
@@ -65,12 +73,15 @@
         <button class="choice3" onclick="
             playGame('scissors');
         "></button>
-        
+        <p class="js-move"></p>
+        <p class="js-result"></p>       
+        <p class="js-score"></p>
         <button onclick="
         score.wins=0;
         score.loses=0;
         score.ties=0;
         localStorage.removeItem('score');
+        updateScore();
         " class="reset">Reset score</button>
         <script>
             let score=JSON.parse(localStorage.getItem('score')) || {
@@ -140,9 +151,17 @@
             } else if (result===" Tie."){
                 score.ties+=1
             };
+            document.querySelector('.js-move')
+                .innerHTML=`you ${playerMove} - ${compMove} Computer`;
+            document.querySelector('.js-result')
+                .innerHTML= result;
+            
+            updateScore()
             localStorage.setItem('score',JSON.stringify(score));
-
-            alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}\nWins: ${score.wins}, loses: ${score.loses}, ties: ${score.ties}`)
+            }
+            function updateScore(){
+                document.querySelector('.js-score')
+                .innerHTML=`Wins: ${score.wins}, loses: ${score.loses}, ties: ${score.ties}`;
             }
         </script>
     </body>
