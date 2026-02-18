@@ -48,13 +48,13 @@ Click the **Reset Score** button to:
 The computer selects a move randomly using:
 
 ```js
-Math.random()
+Math.random().
 
 ---
 
 🛠 Technologies Used
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+- HTML5
+- CSS3
+- JavaScript
 
