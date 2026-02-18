@@ -6,6 +6,9 @@
             body{
                 background-color: #050101e1;
                 box-sizing: border-box;
+                color: white;
+                font-weight: bold;
+                font-family: Arial;
             }
             button{
                 background-color: #050101e1;
@@ -14,7 +17,7 @@
                 width: 150px;
                 height: 150px;
                 border: 3px solid white;
-                
+                cursor: pointer;
                 
             }
             .choice1::after{
@@ -35,11 +38,17 @@
                 
                 }
                
-            h1,h2{
-                color: white;
+            h1{
+                
                 margin-left: 20px;
-                margin-top: 70px;
-                margin-bottom: 70px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                
+            }
+            h2{
+                margin-left: 20px;
+                margin-top: 20px;
+                margin-bottom: 40px;
             }
             .reset{
                 color: white;
@@ -49,14 +58,23 @@
                 margin-top: 30px;
                 width: 150px;
                 height: 50px;
+                cursor: pointer;
             }
             p{
                 font-size: 20px;
                 color: white;
-                margin-top: 30px;
+                margin-top: 20px;
                 margin-left: 60px;
             }
-            
+            img{
+                
+                width: 60px;
+                height: 60px;
+            }
+            .move{
+                margin-top: 60px;
+                
+            }
         </style>
     </head>
     <body>
@@ -73,7 +91,7 @@
         <button class="choice3" onclick="
             playGame('scissors');
         "></button>
-        <p class="js-move"></p>
+        <p class="js-move move"></p>
         <p class="js-result"></p>       
         <p class="js-score"></p>
         <button onclick="
@@ -152,7 +170,7 @@
                 score.ties+=1
             };
             document.querySelector('.js-move')
-                .innerHTML=`you ${playerMove} - ${compMove} Computer`;
+                .innerHTML=`You <img src="${playerMove}.png">   <img src="${compMove}.png"> Computer`;
             document.querySelector('.js-result')
                 .innerHTML= result;
             
