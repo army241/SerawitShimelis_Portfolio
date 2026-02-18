@@ -15,24 +15,6 @@ button{
     cursor: pointer;
 
 }
-.choice1::after{
-    content: "✊";
-    font-size: 60px;
-
-}
-
-.choice2::before{
-    content: "✋";
-    font-size: 60px;
-
-}
-
-.choice3::after{
-    content: "✌️";
-    font-size: 60px;
-
-}
-
 h1{
     margin-left: 20px;
     margin-top: 40px;
@@ -60,8 +42,8 @@ p{
     margin-left: 60px;
 }
 img{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
 }
 .move{
     margin-top: 60px;
