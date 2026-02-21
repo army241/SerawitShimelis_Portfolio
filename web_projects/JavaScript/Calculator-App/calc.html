@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator App</title>
+        <link rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+        <h1>Calculator App</h1>
+        <p class="js-result"></p>
+        <div class="Calc-buttons"> 
+                <button onclick="calculation=''
+            result()">C</button>
+                <button onclick="calculation+='%'
+            result()">%</button>
+                <button onclick="calculation=calculation.slice(0,-1);
+            result()">R</button>
+                <button onclick="calculation+='/'
+            result()">/</button>
+        </div>
+        <div class="Calc-buttons">
+                <button onclick="calculation+='7'
+            result()">7</button>
+                <button onclick="calculation+='8'
+            result()">8</button>
+                <button onclick="calculation+='9'
+            result()">9</button>
+                <button onclick="calculation+='*'
+            result()">*</button>
+        </div>
+        <div class="Calc-buttons">
+                <button onclick="calculation+='4'
+            result()">4</button>
+                <button onclick="calculation+='5'
+            result()">5</button>
+                <button onclick="calculation+='6'
+            result()">6</button>
+                <button onclick="calculation+='-'
+            result()">-</button>
+        </div>
+        <div class="Calc-buttons">
+                <button onclick="
+            calculation+='1'
+            
+            result()">1</button>
+                <button onclick="
+            calculation+='2'
+            
+            result()">2</button>
+                <button onclick="
+            calculation+='3'
+            
+            result()">3</button>
+                <button onclick="calculation+='+'
+            result()">+</button>
+        </div>
+        <div class="Calc-buttons">
+                <button class="no-button"></button>
+                <button onclick="calculation+='0'
+            result()">0</button>
+                <button onclick="calculation+='.'
+            result()">.</button>
+                <button onclick="
+        calculation=eval(calculation);
+        result();
+        ;
+        ">=</button>
+        </div>
+        
+        
+        <script src="calc.js"></script>
+    </body>
+</html>
