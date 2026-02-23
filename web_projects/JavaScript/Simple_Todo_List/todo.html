@@ -1,69 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body{
-                background-color: rgb(22, 16, 16);
-                color: white;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            input{
-                height: 30px;
-                width: 300px;
-                margin-right: 20px;
-                border: 2px solid rgb(108, 107, 107);
-                border-radius: 15px;
-                padding-left: 18px;
-            }
-            button{
-                height: 37px;
-                width: 100px;
-                border-radius: 14px;
-            }
-            .js-todo-list{
-                background-color: rgb(108, 107, 107);
-                color: black;
-                width: 300px;
-                padding-left: 18px;
-                border-radius: 15px;
-                margin-top: 10px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-
-            }
-        </style>
+        <link rel="stylesheet" href="todo_styles.css">
     </head>
     <body>
         <h2>Todo List</h2>
         <hr>
         <input placeholder="Your Todo List" class="js-todo-name">
+        <input type="date" class="js-todo-date">
         <button onclick="
         addTodo();
         " >Add</button>
         <div class="js-todo-list"></div>
-        <script>
-            const todoList=[];
-            renderTodo()
-            function renderTodo(){
-                let inputHtml ='';
-                for (let i=0;i<todoList.length;i++){
-                    const todo=todoList[i];
-                    const html=`<p>${todo}</p>`;
-                    inputHtml+=html;
-                }
-                
-                document.querySelector('.js-todo-list').innerHTML= inputHtml;
-            }
-            
-            
-            function addTodo(){
-                let inputElement=document.querySelector('.js-todo-name');
-                let name=inputElement.value;
-                todoList.push(name);
-                console.log(todoList);
-                inputElement.value='';
-                renderTodo()
-            }
-        </script>
+        <script src="todo.js"></script>
     </body>
 </html>
