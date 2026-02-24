@@ -6,11 +6,14 @@
     <body>
         <h2>Todo List</h2>
         <hr>
-        <input placeholder="Your Todo List" class="js-todo-name">
-        <input type="date" class="js-todo-date">
+        <div class="todo-input-grid">
+        <input placeholder="Your Todo List" class="js-todo-name name-input">
+        <input type="date" class="js-todo-date due-date-input">
         <button onclick="
         addTodo();
-        " >Add</button>
+        " class="add-button">Add</button>  
+        </div>
+        
         <div class="js-todo-list"></div>
         <script src="todo.js"></script>
     </body>
