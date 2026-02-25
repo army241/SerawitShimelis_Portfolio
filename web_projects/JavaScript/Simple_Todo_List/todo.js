@@ -11,7 +11,7 @@ const todoList=[
 
 function renderTodo(){
     let inputHtml ='';
-    for (let i=0;i<todoList.length;i++){
+    /*for (let i=0;i<todoList.length;i++){
         const todoObject=todoList[i];
         //const name=todoObject.name;
         //const dueDate=todoObject.dueDate;
@@ -28,7 +28,21 @@ function renderTodo(){
         `;
         inputHtml+=html;
     }
-    
+    */
+   todoList.forEach(function(todoObject,index){
+    const {name,dueDate}=todoObject;
+        const html=`
+        <div>${name}</div>      
+        <div>${dueDate}</div>
+        <button onclick="
+        todoList.splice(${index},1);
+        renderTodo();
+        "
+        class="delete-button"
+        >Delete</button>
+        `;
+        inputHtml+=html;
+   })
     document.querySelector('.js-todo-list').innerHTML= inputHtml;
 }
 
