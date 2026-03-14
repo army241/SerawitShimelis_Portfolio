@@ -1,11 +1,13 @@
 body{
   font-family:Arial;
-  background-color: grey; 
+  background-color: rgb(32, 26, 26); 
   text-align:center;
+  color: wheat;
 }
 
 #drum-machine{
   margin-top:50px;
+  
 }
 
 #pad-bank{
@@ -19,6 +21,8 @@ body{
   height:100px;
   font-size:30px;
   cursor:pointer;
+  background-color: black;
+  color: beige;
 }
 
 #display{
