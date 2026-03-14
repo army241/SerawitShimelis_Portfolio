@@ -43,4 +43,31 @@ This project was built as part of the **FreeCodeCamp Frontend Development curric
 
 ---
 
-## 📂 Project Structure
+### File Description
+
+**index.html**
+- Contains the structure of the drum machine
+- Includes drum pads and audio elements
+
+**style.css**
+- Handles the layout and visual styling
+- Uses CSS Grid to organize the drum pads
+
+**script.js**
+- Controls the functionality
+- Handles button clicks and keyboard inputs
+- Plays audio clips
+- Updates the display text
+
+---
+
+## ⚙️ How It Works
+
+1. Each drum pad contains an **audio element** with a unique ID.
+2. When a user clicks a drum pad or presses the corresponding key:
+   - JavaScript identifies the correct audio element.
+3. The audio clip is played.
+4. The display updates to show the name of the sound.
+
+Example flow:
+
